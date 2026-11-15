@@ -1,4 +1,7 @@
-"""Smoke tests for spec 001 (AC-001.1, AC-001.5). Base URL only; own data is `smoke-<uuid>`."""
+"""Smoke tests for spec 001 (AC-001.1, AC-001.3, AC-001.5).
+
+Base URL only; own data is `smoke-<uuid>`.
+"""
 
 from __future__ import annotations
 
@@ -27,7 +30,7 @@ def test_smoke_create_task(smoke_base_url: str) -> None:  # AC-001.1
 
 
 @pytest.mark.smoke
-def test_smoke_create_task_rejects_empty_title(smoke_base_url: str) -> None:  # AC-001.1
+def test_smoke_create_task_rejects_empty_title(smoke_base_url: str) -> None:  # AC-001.3
     response = httpx.post(smoke_base_url + "/tasks", json={"title": ""}, timeout=10)
     assert response.status_code == 422
     assert ["body", "title"] in [e["loc"] for e in response.json()["detail"]]
