@@ -1,7 +1,7 @@
 ---
 spec_id: 001-create-and-list-tasks-in-memory
 title: Create and list tasks in memory
-status: draft
+status: approved
 priority: P1
 shape: service-python
 ---
@@ -54,3 +54,4 @@ As an API client, I want to list all tasks, so that I can show what is recorded.
 
 - 2026-11-15 created
 - 2026-11-15 amended: open question on authentication answered (no authentication for now), folded into the non-goals; no criteria changed
+- 2026-11-15 approved
