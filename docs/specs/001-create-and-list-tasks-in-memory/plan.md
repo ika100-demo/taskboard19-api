@@ -10,6 +10,7 @@ tasks:
     covers: [AC-001.1, AC-001.2, AC-001.3, AC-001.4, AC-001.5, AC-001.6, AC-001.7]
     parallel_safe: true
     depends_on: []
+    done: true
   - id: t2
     title: Expose POST /tasks and GET /tasks and wire the store into the app
     files: [src/taskboard19_api/tasks/router.py, src/taskboard19_api/tasks/__init__.py, src/taskboard19_api/main.py]
